@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Way to Spirituality</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to enhance the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Custom focus style for better accessibility */
+        .form-input:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 2px #3b82f6; /* A nice blue ring */
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-12 md:py-20">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">Get in Touch</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.
+            </p>
+        </header>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+            
+            <!-- Left Side: Contact Form -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg order-2 lg:order-1">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">Send us a Message</h2>
+                <form id="contactForm" novalidate>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Name Field -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Rashu Jain" class="form-input w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-lg transition duration-300 focus:bg-white">
+                        </div>
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com" class="form-input w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-lg transition duration-300 focus:bg-white">
+                        </div>
+                    </div>
+                    
+                    <!-- Subject Field -->
+                    <div class="mt-6">
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Regarding your services" class="form-input w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-lg transition duration-300 focus:bg-white">
+                    </div>
+
+                    <!-- Message Field -->
+                    <div class="mt-6">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?" class="form-input w-full px-4 py-3 bg-gray-100 border-gray-200 rounded-lg transition duration-300 focus:bg-white"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="mt-8 text-right">
+                        <button type="submit" class="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105 duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Right Side: Contact Info & Map -->
+            <div class="space-y-10 order-1 lg:order-2">
+                <!-- Contact Details -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                        </div>
+                        
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">Call Us</h4>
+                                <a href="tel:+91 7454867369" class="text-blue-600 hover:underline">+91 7454867369 <br>   Dr. Rashu Jain
+                                </a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
+          
+    <!-- Success Message Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl text-center max-w-sm mx-auto transform transition-all scale-95 opacity-0" id="modalContent">
+            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-check text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900">Message Sent!</h3>
+            <p class="text-gray-600 mt-2">Thank you for reaching out. We'll get back to you as soon as possible.</p>
+            <button id="closeModal" class="mt-6 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">Close</button>
+        </div>
+    </div>
+
+
+    <script>
+        const contactForm = document.getElementById('contactForm');
+        const successModal = document.getElementById('successModal');
+        const modalContent = document.getElementById('modalContent');
+        const closeModalButton = document.getElementById('closeModal');
+
+        contactForm.addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+            
+            // Basic validation check
+            if (contactForm.checkValidity()) {
+                // Show the modal with a transition
+                successModal.classList.remove('hidden');
+                setTimeout(() => {
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+                
+                // You would typically send form data to a server here.
+                // For this example, we just show a message.
+                console.log('Form submitted successfully!');
+                
+                // Optional: reset the form after a delay
+                setTimeout(() => {
+                    contactForm.reset();
+                }, 500);
+
+            } else {
+                // If form is invalid, trigger browser's default validation UI
+                contactForm.reportValidity();
+            }
+        });
+        
+        // Function to close the modal
+        function closeModal() {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            setTimeout(() => {
+                successModal.classList.add('hidden');
+            }, 300); // Wait for the transition to finish
+        }
+
+        // Close modal when the close button is clicked
+        closeModalButton.addEventListener('click', closeModal);
+        
+        // Close modal when clicking outside of the modal content
+        successModal.addEventListener('click', function(event) {
+            if (event.target === successModal) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
